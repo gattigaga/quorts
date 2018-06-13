@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quote should renders default 1`] = `
+<styled.div>
+  <Styled(MdClose)
+    onClick={[Function]}
+  />
+  <styled.p>
+    I am React Developer
+  </styled.p>
+  <styled.span
+    onClick={[Function]}
+  >
+    <Styled(MdContentCopy) />
+     COPY
+  </styled.span>
+</styled.div>
+`;
