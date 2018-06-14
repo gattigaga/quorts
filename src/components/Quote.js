@@ -11,6 +11,7 @@ const Container = styled.div`
   padding-top: 32px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   position: relative;
+  background: white;
 `;
 
 const Text = styled.p`
