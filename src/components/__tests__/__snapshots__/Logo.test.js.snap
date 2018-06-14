@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo should renders default 1`] = `
+<styled.div>
+  <styled.img
+    src="logo.png"
+  />
+  <styled.h1>
+    Quorts
+  </styled.h1>
+</styled.div>
+`;
