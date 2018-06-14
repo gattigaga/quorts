@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import imgLogo from "../assets/images/logo.png";
+import imgLogo from "../assets/images/logo-inverse.png";
 
 const Container = styled.div`
   display: flex;

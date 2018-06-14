@@ -3,7 +3,7 @@
 exports[`Logo should renders default 1`] = `
 <styled.div>
   <styled.img
-    src="logo.png"
+    src="logo-inverse.png"
   />
   <styled.h1>
     Quorts
