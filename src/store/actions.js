@@ -1,4 +1,5 @@
 export const ADD_QUOTE = "ADD_QUOTE";
+export const REMOVE_QUOTE = "REMOVE_QUOTE";
 export const SET_QUOTES = "SET_QUOTES";
 
 /**
@@ -9,6 +10,16 @@ export const SET_QUOTES = "SET_QUOTES";
 export const addQuote = quote => ({
   type: ADD_QUOTE,
   payload: quote
+});
+
+/**
+ * Get action to remove existing quote
+ *
+ * @param {number} quoteID Quote ID
+ */
+export const removeQuote = quoteID => ({
+  type: REMOVE_QUOTE,
+  payload: quoteID
 });
 
 /**
