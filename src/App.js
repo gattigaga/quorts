@@ -58,6 +58,9 @@ const App = ({ quotes, remove }) => (
                       key={quote.id}
                       text={quote.text}
                       onClickRemove={() => remove(quote.id)}
+                      onClickCopy={async () => {
+                        await navigator.clipboard.writeText(quote.text);
+                      }}
                     />
                   </GridItem>
                 ))}
