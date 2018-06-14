@@ -4,14 +4,10 @@ chrome.runtime.onInstalled.addListener(() => {
     title: "Save to Quorts",
     contexts: ["selection"]
   });
+});
 
-  chrome.browserAction.onClicked.addListener(() => {
-    chrome.tabs.create({
-      url: chrome.extension.getURL("index.html")
-    });
-  });
-
-  chrome.contextMenus.onClicked.addListener(info => {
-    alert(info.selectionText);
+chrome.browserAction.onClicked.addListener(() => {
+  chrome.tabs.create({
+    url: chrome.extension.getURL("index.html")
   });
 });
