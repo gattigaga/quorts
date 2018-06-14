@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { connect } from "react-redux";
 
+import { removeQuote } from "./store/actions";
 import Logo from "./components/Logo";
 import Quote from "./components/Quote";
 
@@ -40,7 +41,7 @@ const EmptyText = styled.p`
   margin-top: 15%;
 `;
 
-const App = ({ quotes }) => (
+const App = ({ quotes, remove }) => (
   <Container>
     <Logo />
     {quotes.length > 0 ? (
@@ -53,7 +54,11 @@ const App = ({ quotes }) => (
                 .filter((_, quoteIndex) => quoteIndex % 3 === index)
                 .map(quote => (
                   <GridItem>
-                    <Quote key={quote.id} text={quote.text} />
+                    <Quote
+                      key={quote.id}
+                      text={quote.text}
+                      onClickRemove={() => remove(quote.id)}
+                    />
                   </GridItem>
                 ))}
             </div>
@@ -67,7 +72,8 @@ const App = ({ quotes }) => (
 );
 
 App.propTypes = {
-  quotes: PropTypes.array
+  quotes: PropTypes.array,
+  remove: PropTypes.func
 };
 
 App.defaultProps = {
@@ -76,4 +82,11 @@ App.defaultProps = {
 
 const mapStateToProps = ({ quotes }) => ({ quotes });
 
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = dispatch => ({
+  remove: quoteID => dispatch(removeQuote(quoteID))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
