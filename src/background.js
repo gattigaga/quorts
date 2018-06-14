@@ -11,7 +11,8 @@ chrome.contextMenus.onClicked.addListener(info => {
 
   const quote = {
     id: uuid(),
-    text: info.selectionText
+    text: info.selectionText,
+    date: new Date()
   };
 
   const notification = {

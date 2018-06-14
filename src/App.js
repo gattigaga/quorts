@@ -4,6 +4,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { connect } from "react-redux";
+import { format } from "date-fns";
 import uuid from "uuid/v4";
 
 import { getExcerpt } from "./helpers/formatters";
@@ -61,6 +62,7 @@ const App = ({ quotes, remove }) => (
                     <Quote
                       key={quote.id}
                       text={quote.text}
+                      date={format(quote.date, "MMM DD, YYYY - HH:mm A")}
                       onClickRemove={() => remove(quote.id)}
                       onClickCopy={async () => {
                         await navigator.clipboard.writeText(quote.text);
