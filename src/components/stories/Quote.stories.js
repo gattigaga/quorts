@@ -1,6 +1,7 @@
 import React from "react";
 import { storiesOf, action } from "@storybook/react";
 import styled from "styled-components";
+import { format } from "date-fns";
 
 import Quote from "../Quote";
 
@@ -15,5 +16,6 @@ storiesOf("Quote", module)
       text="React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes."
       onClickCopy={action("clicked")}
       onClickRemove={action("clicked")}
+      date={format(new Date(), "MMM DD, YYYY - HH:mm A")}
     />
   ));

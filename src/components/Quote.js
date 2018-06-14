@@ -23,15 +23,6 @@ const Text = styled.p`
   line-height: 1.5em;
 `;
 
-export const Button = styled.span`
-  margin: 0px;
-  font-family: Roboto;
-  font-size: 16px;
-  color: #aaa;
-  cursor: pointer;
-  user-select: none;
-`;
-
 export const StyledClose = styled(IconClose)`
   color: #aaa;
   font-size: 20px;
@@ -42,22 +33,38 @@ export const StyledClose = styled(IconClose)`
   cursor: pointer;
 `;
 
-const StyledCopy = styled(IconCopy)`
+export const StyledCopy = styled(IconCopy)`
   font-size: 20px;
+  cursor: pointer;
+  user-select: none;
 `;
 
-const Quote = ({ text, onClickCopy, onClickRemove }) => (
+const Row = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const Date = styled.p`
+  font-size: 12px;
+  font-family: Roboto;
+  color: #aaa;
+`;
+
+const Quote = ({ text, date, onClickCopy, onClickRemove }) => (
   <Container>
     <StyledClose onClick={onClickRemove} />
     <Text>{text}</Text>
-    <Button onClick={onClickCopy}>
-      <StyledCopy /> COPY
-    </Button>
+    <Row>
+      <StyledCopy onClick={onClickCopy} />
+      <Date>{date}</Date>
+    </Row>
   </Container>
 );
 
 Quote.propTypes = {
   text: PropTypes.string,
+  date: PropTypes.string,
   onClickCopy: PropTypes.func,
   onClickRemove: PropTypes.func
 };

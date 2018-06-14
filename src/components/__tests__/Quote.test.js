@@ -2,7 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import toJSON from "enzyme-to-json";
 
-import Quote, { Button, StyledClose } from "../Quote";
+import Quote, { StyledCopy, StyledClose } from "../Quote";
 
 describe("Quote", () => {
   const setup = propOverrides => {
@@ -30,7 +30,7 @@ describe("Quote", () => {
   it("should calls 'onClickCopy' while Copy button was clicked", () => {
     const { wrapper, props } = setup();
 
-    wrapper.find(Button).simulate("click");
+    wrapper.find(StyledCopy).simulate("click");
     expect(props.onClickCopy).toBeCalled();
   });
 

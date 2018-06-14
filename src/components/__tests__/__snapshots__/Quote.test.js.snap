@@ -8,11 +8,11 @@ exports[`Quote should renders default 1`] = `
   <styled.p>
     I am React Developer
   </styled.p>
-  <styled.span
-    onClick={[Function]}
-  >
-    <Styled(MdContentCopy) />
-     COPY
-  </styled.span>
+  <styled.div>
+    <Styled(MdContentCopy)
+      onClick={[Function]}
+    />
+    <styled.p />
+  </styled.div>
 </styled.div>
 `;
