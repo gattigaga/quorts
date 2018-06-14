@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { connect } from "react-redux";
 
 import Logo from "./components/Logo";
 import Quote from "./components/Quote";
@@ -73,4 +74,6 @@ App.defaultProps = {
   quotes: []
 };
 
-export default App;
+const mapStateToProps = ({ quotes }) => ({ quotes });
+
+export default connect(mapStateToProps)(App);
