@@ -1,15 +1,13 @@
 /* global chrome */
 import uuid from "uuid/v4";
 
+import { getExcerpt } from "./helpers/formatters";
 import { store } from "./store/store";
 import { addQuote } from "./store/actions";
 
 chrome.contextMenus.onClicked.addListener(info => {
   const { selectionText } = info;
-  const maxLength = 27;
-  const textPart = selectionText.substr(0, maxLength);
-  const excerpt =
-    selectionText.length > maxLength ? `${textPart}...` : textPart;
+  const excerpt = getExcerpt(selectionText, 27);
 
   const quote = {
     id: uuid(),

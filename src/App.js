@@ -1,8 +1,12 @@
+/* global chrome */
+
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { connect } from "react-redux";
+import uuid from "uuid/v4";
 
+import { getExcerpt } from "./helpers/formatters";
 import { removeQuote } from "./store/actions";
 import Logo from "./components/Logo";
 import Quote from "./components/Quote";
@@ -60,6 +64,16 @@ const App = ({ quotes, remove }) => (
                       onClickRemove={() => remove(quote.id)}
                       onClickCopy={async () => {
                         await navigator.clipboard.writeText(quote.text);
+
+                        const excerpt = getExcerpt(quote.text, 27);
+                        const notification = {
+                          type: "basic",
+                          title: "Successfully copied !",
+                          message: excerpt,
+                          iconUrl: "./images/icon-48.png"
+                        };
+
+                        chrome.notifications.create(uuid(), notification);
                       }}
                     />
                   </GridItem>
