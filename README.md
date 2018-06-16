@@ -7,7 +7,8 @@ Save quotes easily in your Google Chrome browser.
 ## Installing
 
 1. Download [here](https://github.com/gattigaga/quorts/releases/tag/1.0.0) (Sorry, I can't pay Chrome Web Store submission fee).
-2. Drag and drop to your Google Chrome browser.
+2. Open Extensions page in Google Chrome Browser.
+3. Drag and drop to it.
 
 ## How to Use
 
