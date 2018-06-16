@@ -26,7 +26,7 @@ const EmptyText = styled.p`
   margin-top: 15%;
 `;
 
-const QuoteListContainer = ({ items, onClickRemove }) =>
+export const QuoteListContainer = ({ items, onClickRemove }) =>
   items.length > 0 ? (
     <div>
       <Title>Quote List</Title>

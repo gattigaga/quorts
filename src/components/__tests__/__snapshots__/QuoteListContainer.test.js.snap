@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuoteListContainer should renders with quotes 1`] = `
+<div>
+  <styled.h1>
+    Quote List
+  </styled.h1>
+  <QuoteList
+    items={
+      Array [
+        Object {
+          "date": 1529122840652,
+          "id": "1",
+          "text": "My Quote 1",
+        },
+        Object {
+          "date": 1529122840652,
+          "id": "2",
+          "text": "My Quote 2",
+        },
+        Object {
+          "date": 1529122840652,
+          "id": "3",
+          "text": "My Quote 3",
+        },
+      ]
+    }
+    onClickCopy={[Function]}
+  />
+</div>
+`;
+
+exports[`QuoteListContainer should renders without quotes 1`] = `
+<styled.p>
+  There's no quotes
+</styled.p>
+`;
