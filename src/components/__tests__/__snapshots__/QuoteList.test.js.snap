@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuoteList should renders default 1`] = `
+<styled.div>
+  <div
+    key="0"
+  >
+    <styled.div
+      key="1"
+    >
+      <Quote
+        date="Jun 16, 2018 - 11:20 AM"
+        onClickCopy={[Function]}
+        onClickRemove={[Function]}
+        text="My Quote 1"
+      />
+    </styled.div>
+  </div>
+  <div
+    key="1"
+  >
+    <styled.div
+      key="2"
+    >
+      <Quote
+        date="Jun 16, 2018 - 11:20 AM"
+        onClickCopy={[Function]}
+        onClickRemove={[Function]}
+        text="My Quote 2"
+      />
+    </styled.div>
+  </div>
+  <div
+    key="2"
+  >
+    <styled.div
+      key="3"
+    >
+      <Quote
+        date="Jun 16, 2018 - 11:20 AM"
+        onClickCopy={[Function]}
+        onClickRemove={[Function]}
+        text="My Quote 3"
+      />
+    </styled.div>
+  </div>
+</styled.div>
+`;
